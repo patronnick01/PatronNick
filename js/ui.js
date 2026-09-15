@@ -45,9 +45,9 @@ function limpiarResultados() {
 
 /* =========================================
    AVISO TEMPORAL: NUEVOS NOMBRES
-   Visible durante 48 horas desde esta actualización.
+   Visible durante 72 horas desde esta actualización.
 ========================================= */
-const NUEVOS_NOMBRES_EXPIRA = Date.parse("2026-08-12T21:55:00Z");
+const NUEVOS_NOMBRES_EXPIRA = Date.parse("2026-08-14T13:29:00Z");
 
 function ocultarAvisoNombresNuevos() {
   const aviso = document.getElementById("newNamesNotice");
@@ -987,7 +987,10 @@ function crearTarjetaCategoria(nombre, opciones = {}) {
         ${nombreVisual}
       </div>
 
-      <div class="estadisticasNombre">
+      <div
+        class="estadisticasNombre estadisticasNombre--abajo"
+        style="position:absolute!important;left:12px!important;right:auto!important;top:auto!important;bottom:2px!important;width:auto!important;margin:0!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:6px!important;z-index:8!important;transform:none!important;"
+      >
 
         <span class="copiasNombre">
           📋 0

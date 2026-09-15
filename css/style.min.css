@@ -4616,58 +4616,101 @@ body.pn-preview-open{
   }
 }
 
-/* ===== ESTADÍSTICAS ABAJO EN TARJETAS DE CATEGORÍAS ===== */
 
-#contenido .tarjetaCategoria{
-    position: relative !important;
-}
+/* =========================================================
+   V5 — ESTADÍSTICAS ABAJO + ICONOS REALES EN GUÍAS SEO
+   ========================================================= */
 
-#contenido .tarjetaCategoria .estadisticasNombre{
-    position: absolute !important;
-    left: 14px !important;
-    bottom: 3px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    gap: 7px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Teléfono */
-@media (max-width: 600px){
-
-    #contenido .tarjetaCategoria .estadisticasNombre{
-        left: 11px !important;
-        bottom: 6px !important;
-        gap: 6px !important;
-    }
-}
-
-/* ===== FIX DEFINITIVO: CONTADORES PEGADOS ABAJO ===== */
-
-html body #contenido .tarjetaCategoria.has-preview .estadisticasNombre{
-    position:absolute !important;
-    left:12px !important;
-    right:auto !important;
-    top:auto !important;
-    bottom:2px !important;
-
-    width:auto !important;
-    margin:0 !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:flex-start !important;
-    gap:6px !important;
-
-    z-index:8 !important;
+html body #contenido .tarjetaCategoria.has-preview .estadisticasNombre.estadisticasNombre--abajo{
+  position:absolute !important;
+  left:12px !important;
+  right:auto !important;
+  top:auto !important;
+  bottom:2px !important;
+  width:auto !important;
+  max-width:46% !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  flex-wrap:nowrap !important;
+  gap:6px !important;
+  z-index:8 !important;
+  transform:none !important;
 }
 
 @media (max-width:700px){
-    html body #contenido .tarjetaCategoria.has-preview .estadisticasNombre{
-        left:10px !important;
-        bottom:2px !important;
-    }
+  html body #contenido .tarjetaCategoria.has-preview .estadisticasNombre.estadisticasNombre--abajo{
+    left:10px !important;
+    bottom:2px !important;
+    gap:5px !important;
+  }
+}
+
+/* Imágenes reales dentro de las páginas guía. */
+.seo-icon.seo-icon-image{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:62px;
+  margin-bottom:8px;
+  font-size:0;
+}
+
+.seo-icon.seo-icon-image img{
+  width:60px;
+  height:60px;
+  display:block;
+  object-fit:contain;
+  filter:drop-shadow(0 5px 8px rgba(0,0,0,.28)) drop-shadow(0 0 12px rgba(74,222,255,.16));
+}
+
+.seo-heading-icon{
+  width:1.34em;
+  height:1.34em;
+  display:inline-block;
+  object-fit:contain;
+  vertical-align:-.31em;
+  margin-right:.28em;
+  filter:drop-shadow(0 3px 5px rgba(0,0,0,.24)) drop-shadow(0 0 7px rgba(67,214,255,.12));
+}
+
+.seo-mini-card > .seo-mini-image{
+  display:flex;
+  align-items:center;
+  min-height:31px;
+  margin-bottom:9px;
+  font-size:0;
+}
+
+.seo-mini-image img{
+  width:30px;
+  height:30px;
+  display:block;
+  object-fit:contain;
+  filter:drop-shadow(0 3px 5px rgba(0,0,0,.24));
+}
+
+.seo-generator-icon.seo-generator-icon-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:52px;
+  margin-bottom:5px;
+  font-size:0;
+}
+
+.seo-generator-icon.seo-generator-icon-image img{
+  width:50px;
+  height:50px;
+  display:block;
+  object-fit:contain;
+  filter:drop-shadow(0 4px 7px rgba(0,0,0,.26)) drop-shadow(0 0 10px rgba(67,214,255,.13));
+}
+
+@media (max-width:600px){
+  .seo-icon.seo-icon-image{min-height:54px;}
+  .seo-icon.seo-icon-image img{width:52px;height:52px;}
+  .seo-heading-icon{width:1.22em;height:1.22em;vertical-align:-.27em;}
 }
