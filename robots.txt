@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://patronnick0.github.io/PatronNick/sitemap.xml
+Sitemap: https://patronnick.org/sitemap.xml
